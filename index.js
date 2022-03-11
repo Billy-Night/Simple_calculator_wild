@@ -20,8 +20,31 @@ let secondValue = parseInt(prompt("Type the second value:"));
 
 //console.log(result);
 
-    if (operator === "+") {
-        console.log(firstValue + secondValue);
-    } else {
-         console.log(firstValue - secondValue);
+   // if (operator === "+") {
+    //    console.log(firstValue + secondValue);
+    //} else {
+    //     console.log(firstValue - secondValue);
+    //}
+
+
+/* switch (operator) {
+    case '+':
+    console.log(firstValue + secondValue);
+    break;
+    case '-':
+    console.log(firstValue - secondValue);
+    break;
+    } */
+
+// Adding the switch statement to a function so it can be reused!
+    function calculator (firstNumber, secondNumber, operation) {
+    switch (operation) {
+    case '+':
+    return firstNumber + secondNumber;
+    break;
+    case '-':
+    return firstNumber - secondNumber;
+    break;
     }
+}
+console.log(calculator(firstValue,secondValue,operator))
